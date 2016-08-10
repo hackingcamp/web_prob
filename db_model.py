@@ -1,6 +1,6 @@
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True, unique=True, nullable=False)
-    userid = db.Column(db.String(30), nullable=False)
+    userid = db.Column(db.String(30), nullable=False, unique=True)
     userpw = db.Column(db.String(50), nullable=False)
     score = db.Column(db.Integer, default=0, nullable=False)
     active = db.Column(db.Boolean, default=True, nullable=False)
